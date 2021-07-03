@@ -20,5 +20,7 @@
         <mapping class="ru.job4j.many.User" />
         <mapping class="ru.job4j.many.CarModel" />
         <mapping class="ru.job4j.many.CarBrand" />
+        <mapping class="ru.job4j.manytomany.Address" />
+        <mapping class="ru.job4j.manytomany.Person" />
     </session-factory>
 </hibernate-configuration>
