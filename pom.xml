@@ -12,10 +12,6 @@
         <encoding>UTF-8</encoding>
         <maven.compiler.source>14</maven.compiler.source>
         <maven.compiler.target>14</maven.compiler.target>
-<!--        <db.url>jdbc:postgresql://localhost/test</db.url>-->
-<!--        <db.username>postgres</db.username>-->
-<!--        <db.password></db.password>-->
-<!--        <db.driver>org.postgresql.Driver</db.driver>-->
     </properties>
 
     <dependencies>
