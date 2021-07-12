@@ -20,13 +20,13 @@ public class HbmCarLazyFetchRun {
 //            session.beginTransaction();
 
 //            Brand ford = Brand.of("Ford");
-//            session.save(ford);
 //
-//            session.persist(Model.of("Fiesta", ford));
-//            session.persist(Model.of("Focus", ford));
-//            session.persist(Model.of("EcoSport", ford));
-//            session.persist(Model.of("Mondeo", ford));
-//            session.persist(Model.of("Tourneo Custom", ford));
+//            ford.addModel(Model.of("Fiesta"));
+//            ford.addModel(Model.of("Focus"));
+//            ford.addModel(Model.of("EcoSport"));
+//            ford.addModel(Model.of("Mondeo"));
+//            ford.addModel(Model.of("Tourneo Custom"));
+//            session.persist(ford);
 //
 //            session.getTransaction().commit();
 //            session.close();

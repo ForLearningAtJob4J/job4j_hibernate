@@ -34,6 +34,10 @@ public class Brand {
         return models;
     }
 
+    public void addModel(Model model) {
+        models.add(model);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -43,12 +47,12 @@ public class Brand {
             return false;
         }
         Brand brand = (Brand) o;
-        return id == brand.id && name.equals(brand.name);
+        return id == brand.id;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name);
+        return Objects.hash(id);
     }
 
     @Override

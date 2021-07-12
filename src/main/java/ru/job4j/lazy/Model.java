@@ -16,10 +16,10 @@ public class Model {
     @JoinColumn(name = "brand_id")
     private Brand brand;
 
-    public static Model of(String name, Brand brand) {
+    public static Model of(String name) {
         Model carModel = new Model();
         carModel.name = name;
-        carModel.brand = brand;
+//        carModel.brand = brand;
         return carModel;
     }
 
@@ -48,12 +48,12 @@ public class Model {
             return false;
         }
         Model model = (Model) o;
-        return id == model.id && name.equals(model.name) && brand.equals(model.brand);
+        return id == model.id;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, brand);
+        return Objects.hash(id);
     }
 
     @Override
