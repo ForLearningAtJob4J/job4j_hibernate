@@ -5,7 +5,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "j_user")
-public class User {
+public class JUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -14,10 +14,10 @@ public class User {
 
     @ManyToOne
     @JoinColumn(name = "role_id")
-    private Role role;
+    private JRole role;
 
-    public static User of(String name, Role role) {
-        User user = new User();
+    public static JUser of(String name, JRole role) {
+        JUser user = new JUser();
         user.name = name;
         user.role = role;
         return user;
@@ -39,19 +39,23 @@ public class User {
         this.name = name;
     }
 
-    public Role getRole() {
+    public JRole getRole() {
         return role;
     }
 
-    public void setRole(Role role) {
+    public void setRole(JRole role) {
         this.role = role;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        JUser user = (JUser) o;
         return id == user.id;
     }
 

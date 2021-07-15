@@ -14,9 +14,9 @@ public class HbmRun {
                 .configure().build();
         try {
             SessionFactory sf = new MetadataSources(registry).buildMetadata().buildSessionFactory();
-            Role role = create(Role.of("ADMIN"), sf);
-            create(User.of("Petr Arsentev", role), sf);
-            for (User user : findAll(User.class, sf)) {
+            JRole role = create(JRole.of("ADMIN"), sf);
+            create(JUser.of("Petr Arsentev", role), sf);
+            for (JUser user : findAll(JUser.class, sf)) {
                 System.out.println(user.getName() + " " + user.getRole().getName());
             }
         }  catch (Exception e) {

@@ -15,8 +15,8 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
         <property name="hibernate.jdbc.time_zone">Asia/Krasnoyarsk</property>
 
-<!--        <mapping class="ru.job4j.toone.Role" />-->
-<!--        <mapping class="ru.job4j.toone.User" />-->
+        <mapping class="ru.job4j.toone.JRole" />
+        <mapping class="ru.job4j.toone.JUser" />
         <mapping class="ru.job4j.many.Role" />
         <mapping class="ru.job4j.many.User" />
         <mapping class="ru.job4j.many.CarModel" />
