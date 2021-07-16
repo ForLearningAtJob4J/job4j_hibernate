@@ -33,5 +33,6 @@
         <mapping class="ru.job4j.mapping.Driver" />
         <mapping class="ru.job4j.mapping.Car" />
         <mapping class="ru.job4j.mapping.Engine" />
+        <mapping class="ru.job4j.hql.Student" />
     </session-factory>
 </hibernate-configuration>
