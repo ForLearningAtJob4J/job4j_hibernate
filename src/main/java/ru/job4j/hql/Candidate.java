@@ -1,9 +1,6 @@
 package ru.job4j.hql;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
@@ -14,6 +11,17 @@ public class Candidate {
     private String name;
     private int experience;
     private double salary;
+
+    @OneToOne
+    private Base base;
+
+    public Base getBase() {
+        return base;
+    }
+
+    public void setBase(Base base) {
+        this.base = base;
+    }
 
     public static Candidate of(String name, int experience, double salary) {
         Candidate candidate = new Candidate();
