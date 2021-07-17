@@ -15,8 +15,8 @@ public class HbmLibraryRun {
             Session session = sf.openSession();
             session.beginTransaction();
 
-            Book nightPatrol = Book.of("Ночной дозор");
-            Book dayPatrol = Book.of("Дневной дозор");
+            JBook nightPatrol = JBook.of("Ночной дозор");
+            JBook dayPatrol = JBook.of("Дневной дозор");
 
             Author sergeyLukiyanenko = Author.of("Сергей Лукьяненко");
             sergeyLukiyanenko.addBook(nightPatrol);

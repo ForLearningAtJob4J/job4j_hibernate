@@ -4,16 +4,16 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "books")
-public class Book {
+@Table(name = "j_books")
+public class JBook {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String name;
 
-    public static Book of(String name) {
-        Book book = new Book();
+    public static JBook of(String name) {
+        JBook book = new JBook();
         book.name = name;
         return book;
     }
@@ -26,12 +26,12 @@ public class Book {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        Book book = (Book) o;
-        return id == book.id && Objects.equals(name, book.name);
+        JBook book = (JBook) o;
+        return id == book.id;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name);
+        return Objects.hash(id);
     }
 }

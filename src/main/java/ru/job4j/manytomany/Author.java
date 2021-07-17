@@ -15,7 +15,7 @@ public class Author {
     private String name;
 
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    private List<Book> books = new ArrayList<>();
+    private List<JBook> books = new ArrayList<>();
 
     public static Author of(String name) {
         Author author = new Author();
@@ -23,7 +23,7 @@ public class Author {
         return author;
     }
 
-    public void addBook(Book book) {
+    public void addBook(JBook book) {
         this.books.add(book);
     }
 
@@ -36,11 +36,11 @@ public class Author {
             return false;
         }
         Author author = (Author) o;
-        return id == author.id && Objects.equals(name, author.name) && Objects.equals(books, author.books);
+        return id == author.id;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, books);
+        return Objects.hash(id);
     }
 }
