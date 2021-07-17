@@ -10,10 +10,10 @@ import java.util.Objects;
 public class Candidate {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
-    String name;
-    int experience;
-    double salary;
+    private int id;
+    private String name;
+    private int experience;
+    private double salary;
 
     public static Candidate of(String name, int experience, double salary) {
         Candidate candidate = new Candidate();
