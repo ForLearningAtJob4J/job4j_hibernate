@@ -34,8 +34,6 @@ public class HbmRunOtherTask {
             StandardServiceRegistryBuilder.destroy(registry);
         }
 
-        assert rsl != null;
-        assert rsl.getBase().getVacancies() != null;
         rsl.getBase().getVacancies().forEach(System.out::println);
     }
 }
